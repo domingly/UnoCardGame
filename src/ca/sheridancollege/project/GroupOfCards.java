@@ -20,7 +20,25 @@ public class GroupOfCards {
     //The group of cards, stored in an ArrayList
     private ArrayList<Card> cards;
     private int size;//the size of the grouping
-
+    
+    public enum CardColor {
+    RED,
+    GREEN,
+    BLUE,
+    YELLOW
+    }
+    public enum CardType {
+    SKIP,
+    REVERSE,
+    DRAW_TWO,
+    WILD_COLOR,
+    WILD_DRAW_FOUR,
+    NUMBER
+    
+    }
+     private CardType cardType;
+     private CardColor cardColor;
+     
     public GroupOfCards(int size) {
         this.size = size;
     }
@@ -32,6 +50,22 @@ public class GroupOfCards {
      */
     public ArrayList<Card> getCards() {
         return cards;
+    }
+
+    public CardType getCardType() {
+        return cardType;
+    }
+
+    public void setCardType(CardType cardType) {
+        this.cardType = cardType;
+    }
+
+    public CardColor getCardColor() {
+        return cardColor;
+    }
+
+    public void setCardColor(CardColor cardColor) {
+        this.cardColor = cardColor;
     }
 
     public void shuffle() {

@@ -14,12 +14,28 @@ package ca.sheridancollege.project;
 public abstract class Player {
 
     private String name; //the unique name for this player
+    private final GroupOfCards handCards;
+    public enum Direction{
+        COUNTER_CLOCKWISE,
+        CLOCKWISE
+    }
+    private Direction direction;
+
+    
+    public Direction getDirection() {
+        return direction;
+    }
 
     /**
      * A constructor that allows you to set the player's unique ID
      *
+     * @param direction
      * @param name the unique ID to assign to this player.
      */
+    public void setDirection(Direction direction) {    
+        this.direction = direction;
+    }
+
     public Player(String name) {
         this.name = name;
     }
