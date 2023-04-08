@@ -17,5 +17,7 @@ public class Dealer {
     }
      public static GroupOfCards[] dealInitHandCards(DrawPile drawPile, int totalPlayers) {
       
+        return null;
+      
      }
 }

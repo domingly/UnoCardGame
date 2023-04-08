@@ -15,17 +15,23 @@ import java.util.Collections;
  * @author dancye
  * @author Paul Bonenfant Jan 2020
  */
-public class GroupOfCards {
+public class GroupOfCards extends Card {
 
     //The group of cards, stored in an ArrayList
     private ArrayList<Card> cards;
     private int size;//the size of the grouping
+
+    @Override
+    public String toString() {
+       return "Uno Card";
+    }
     
     public enum CardColor {
     RED,
     GREEN,
     BLUE,
-    YELLOW
+    YELLOW,
+    NONE
     }
     public enum CardType {
     SKIP,
@@ -38,10 +44,21 @@ public class GroupOfCards {
     }
      private CardType cardType;
      private CardColor cardColor;
+     protected String cardValue;
+
+    public String getCardValue() {
+        return cardValue;
+    }
      
     public GroupOfCards(int size) {
         this.size = size;
     }
+
+    public GroupOfCards(String value, CardColor cardColor) {
+        this.cardValue = value;
+        this.cardColor = cardColor;
+    }
+
 
     /**
      * A method that will get the group of cards as an ArrayList

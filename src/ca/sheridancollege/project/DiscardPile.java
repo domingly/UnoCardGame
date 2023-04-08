@@ -11,23 +11,29 @@ import java.util.Stack;
  *
  * @author Lyn
  */
-public class DrawPile {
+public class DiscardPile {
     private final Stack<GroupOfCards> cards = new Stack<>();
 
-    public DrawPile(List<GroupOfCards> shuffledCards) {
-        cards.addAll(shuffledCards);
+    public DiscardPile(GroupOfCards shuffledCards) {
+        cards.add(shuffledCards);
     }
 
-    public GroupOfCards drawCard() {
-        return cards.pop();
+    public DiscardPile() {
     }
-        
-    public int getSize() {
-        return cards.size();
+    
+    public void addDiscard(GroupOfCards shuffledCards){
+            cards.add(shuffledCards);
     }
 
     public Stack<GroupOfCards> getCards() {
         return cards;
     }
-    
+
+    public GroupOfCards drawCard() {
+        return cards.pop();
+    }
+
+    public int getSize() {
+        return cards.size();
+    }
 }
