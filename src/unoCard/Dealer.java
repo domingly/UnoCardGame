@@ -2,18 +2,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ca.sheridancollege.project;
+package unoCard;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
  * @author Lyn
  */
-public class Dealer {
+public class Dealer extends Deck {
     public static final int INIT_HAND_CARDS = 7; 
-    private static void swapCard(List<Card> shuffledList, int currentIndex, int randomIndex) {
-    
+
+
+    public Dealer(){
+        super.createCard();
+    }
+    public void deckCard(){
+             DrawPile draw=new DrawPile(super.shuffle());
     }
      public static GroupOfCards[] dealInitHandCards(DrawPile drawPile, int totalPlayers) {
       

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ca.sheridancollege.project;
+package unoCard;
 
 import java.util.ArrayList;
 
@@ -18,6 +18,9 @@ public class PlayerList extends Player {
         return playerList.get(index);
        
     }
+         public int totalPlayer(){
+            return playerList.size();
+         }
           public void addPlayer(Player p){
         playerList.add(p);
     }
@@ -29,8 +32,12 @@ public class PlayerList extends Player {
         int increment = Player.direction == Player.Direction.CLOCKWISE ? 1 : -1;
         System.out.println(curr);
         System.out.println(increment);
+        getCurrentPlayer((playerList.size() + curr + increment) % playerList.size());
         return (playerList.size() + curr + increment) % playerList.size();
     }
+     public Player getCurrentPlayer(int index){
+         return playerList.get(index);
+     }
     
 }
 

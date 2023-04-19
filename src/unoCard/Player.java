@@ -3,7 +3,7 @@
  * Students can modify and extend to implement their game.
  * Add your name as an author and the date!
  */
-package ca.sheridancollege.project;
+package unoCard;
 
 import java.util.ArrayList;
 
@@ -45,15 +45,24 @@ public  class Player  {
        
     }
    
-    public void setDirection(Direction direction) {    
-        this.direction = direction;
-    }
+
 
     public ArrayList<GroupOfCards> getHandCards() {
         return handCards;
     }
-
-
+    public int getSize(){
+        return handCards.size();
+    }
+    public GroupOfCards getHandCards(int size,int i) throws IllegalArgumentException{
+        System.out.println(size);
+      if(i > size){
+          throw new IllegalArgumentException("Array out of bounds");
+      }else{
+           return handCards.get(i);
+      }
+       
+     
+    }
     public Player(){
         
     }

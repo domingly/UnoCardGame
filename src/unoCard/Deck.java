@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ca.sheridancollege.project;
+package unoCard;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,14 +12,14 @@ import java.util.Random;
  *
  * @author Lyn
  */
-public class Deck {
+public class Deck extends CardRules {
     protected ArrayList<GroupOfCards> cards=new ArrayList<>();
       private Random rand;
       public Deck() {
         rand = new Random();
 
     }
-    public ArrayList<GroupOfCards> fillDeck(){
+    public ArrayList<GroupOfCards> createCard(){
            //for normal card value one to nine
            for (int i=1; i<=9; i++) {
             for (int x=0; x<2; x++) {
