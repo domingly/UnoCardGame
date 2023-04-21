@@ -4,8 +4,6 @@
  */
 package unoCard;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
@@ -19,7 +17,10 @@ public class Dealer extends Deck {
         super.createCard();
     }
     public void deckCard(){
-             DrawPile draw=new DrawPile(super.shuffle());
+        DrawPile drawPile = new DrawPile(super.shuffle());
+    }
+       public DrawPile shuffleCard(){
+        return new DrawPile(super.shuffle());
     }
      public static GroupOfCards[] dealInitHandCards(DrawPile drawPile, int totalPlayers) {
       

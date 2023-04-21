@@ -31,7 +31,7 @@ public class GroupOfCards extends Card {
     GREEN,
     BLUE,
     YELLOW,
-    NONE
+    BLACK
     }
     public enum CardType {
     SKIP,
@@ -84,6 +84,7 @@ public class GroupOfCards extends Card {
     public void setCardColor(CardColor cardColor) {
         this.cardColor = cardColor;
     }
+
 
     public void shuffle() {
         Collections.shuffle(cards);

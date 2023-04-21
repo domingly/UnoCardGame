@@ -13,12 +13,15 @@ import java.util.Random;
  * @author Lyn
  */
 public class Deck extends CardRules {
-    protected ArrayList<GroupOfCards> cards=new ArrayList<>();
+    private ArrayList<GroupOfCards> cards=new ArrayList<>();
       private Random rand;
       public Deck() {
         rand = new Random();
 
     }
+    
+    
+      
     public ArrayList<GroupOfCards> createCard(){
            //for normal card value one to nine
            for (int i=1; i<=9; i++) {
@@ -51,8 +54,8 @@ public class Deck extends CardRules {
             cards.add(new GroupOfCards(GroupOfCards.CardType.SKIP.toString(),GroupOfCards.CardColor.RED));
         }
         for (int p=0; p<4; p++) {
-            cards.add(new GroupOfCards(GroupOfCards.CardType.WILD_COLOR.toString(),GroupOfCards.CardColor.NONE));
-             cards.add(new GroupOfCards(GroupOfCards.CardType.WILD_DRAW_FOUR.toString(),GroupOfCards.CardColor.NONE));
+            cards.add(new GroupOfCards(GroupOfCards.CardType.WILD_COLOR.toString(),GroupOfCards.CardColor.BLACK));
+             cards.add(new GroupOfCards(GroupOfCards.CardType.WILD_DRAW_FOUR.toString(),GroupOfCards.CardColor.BLACK));
         }
    //Collections.shuffle(cards);
    return cards;

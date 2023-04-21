@@ -90,6 +90,14 @@ public  class Player  {
     public String toString() {
         return "Player{" + "name=" + name + '}';
     }
+    public boolean declareWinner(Player p){
+        if(p.getHandCards().size()==1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
     /**
      * The method to be overridden when you subclass the Player class with your specific type of Player and filled in

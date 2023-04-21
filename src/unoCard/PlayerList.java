@@ -30,8 +30,8 @@ public class PlayerList extends Player {
     //method for next player.   
      public int getNextPlayer(int curr) {
         int increment = Player.direction == Player.Direction.CLOCKWISE ? 1 : -1;
-        System.out.println(curr);
-        System.out.println(increment);
+       // System.out.println(curr);
+       // System.out.println(increment);
         getCurrentPlayer((playerList.size() + curr + increment) % playerList.size());
         return (playerList.size() + curr + increment) % playerList.size();
     }

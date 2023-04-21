@@ -11,8 +11,13 @@ import java.util.Stack;
  *
  * @author Lyn
  */
-public class DiscardPile {
+public class DiscardPile extends Deck {
     private final Stack<GroupOfCards> cards = new Stack<>();
+
+    public Stack<GroupOfCards> getCards() {
+        return cards;
+    }
+    
 
     public DiscardPile(GroupOfCards shuffledCards) {
         cards.add(shuffledCards);
