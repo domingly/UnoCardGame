@@ -18,6 +18,7 @@ public class PlayGame {
      */
     public static void main(String[] args) {
          Dealer deck=new Dealer(); //generate uno card 
+        // deck.drawPile();
          PlayerList p=new PlayerList();
       //   System.out.println(deck.createCard().size()); //total size of uno card generated
         Scanner input=new Scanner(System.in);
@@ -42,7 +43,7 @@ public class PlayGame {
                    p.addPlayer(pl); //add the player in player list array
         }
                 DrawPile draw=new DrawPile(deck.shuffle()); //shuffle the card
-               //  System.out.println(draw.getSize()); for checking only if the total size of draw same with the remaining card.
+               System.out.println(draw.getSize()); //for checking only if the total size of draw same with the remaining card.
               
              
                   DiscardPile discard=new DiscardPile();  //set constructor for discard file
@@ -51,8 +52,8 @@ public class PlayGame {
                 int curr=0; //begin index 0 of the player list.
                 
                 //test the game
-                   discard.addDiscard(draw.getTopCard()); //Assign top card
-                    draw.removeCard(draw.getTopCard()); //remove card in draw.
+                   discard.addDiscard(draw.drawCards()); //Assign top card
+                    draw.removeCard(draw.drawCards()); //remove card in draw.
                while(true){
                     //check if the initial band card is not empty.
                     if( !p.getPlayerList().get(curr).getHandCards().isEmpty()){ 

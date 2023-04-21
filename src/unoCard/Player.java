@@ -55,7 +55,7 @@ public  class Player  {
     }
     public GroupOfCards getHandCards(int size,int i) throws IllegalArgumentException{
         System.out.println(size);
-      if(i > size){
+      if(i >= size){
           throw new IllegalArgumentException("Array out of bounds");
       }else{
            return handCards.get(i);
